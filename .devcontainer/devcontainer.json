@@ -1,0 +1,27 @@
+{
+    //VScodeがコンテナに接続したときのタイトルを自由に設定
+    "name": "Python VScode",
+    "dockerComposeFile": "docker-compose.yml",
+    //docker-conpose.ymlファイル内に記載したサービス名を指定
+    "service": "python",
+    //VScode接続時に開くフォルダを指定          
+    "workspaceFolder": "/work",
+    //VScodeの環境を指定
+    "customizations": {
+        "vscode": {
+            //コンテナ作成時にインストールする拡張機能を記載
+            "extensions": [
+                //GitHub copilot
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                //Python
+                "ms-python.python"
+            ],
+            //VScodeの設定を記載
+            "settings": { 
+                //ファイルのオートセーブ
+                "files.autoSave": "afterDelay"
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python:
+    build:
+      dockerfile: Dockerfile
+    container_name: python
+    working_dir: /work
+    volumes:
+      - ../work:/work
+    tty: true
